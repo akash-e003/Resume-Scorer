@@ -1,0 +1,75 @@
+﻿[dotenv@17.3.1] injecting env (2) from .env -- tip: ΓÜÖ∩╕Å  write to custom object with { processEnv: myObject }
+node : Error details: G
+oogleGenerativeAIFetchE
+rror: 
+[GoogleGenerativeAI 
+Error]: Error fetching 
+from https://generative
+language.googleapis.com
+/v1beta/models/gemini-1
+.5-flash:generateConten
+t: [404 Not Found] mode
+ls/gemini-1.5-flash is 
+not found for API 
+version v1beta, or is 
+not supported for 
+generateContent. Call 
+ListModels to see the 
+list of available 
+models and their 
+supported methods.
+At line:1 char:1
++ node test-gemini.js 
+2>&1 | Out-File 
+-Encoding UTF8 
+test-error2.txt
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Error details   
+ : ...ported method    
+s.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+    at 
+handleResponseNotOk (C:
+\Users\akash\OneDrive\D
+esktop\new projects\ats
+-resume-scorer\server\n
+ode_modules\@google\gen
+erative-ai\dist\index.j
+s:434:11)
+    at process.processT
+icksAndRejections (node
+:internal/process/task_
+queues:105:5)
+    at async 
+makeRequest (C:\Users\a
+kash\OneDrive\Desktop\n
+ew projects\ats-resume-
+scorer\server\node_modu
+les\@google\generative-
+ai\dist\index.js:403:9)
+    at async 
+generateContent (C:\Use
+rs\akash\OneDrive\Deskt
+op\new projects\ats-res
+ume-scorer\server\node_
+modules\@google\generat
+ive-ai\dist\index.js:86
+7:22)
+    at async run (C:\Us
+ers\akash\OneDrive\Desk
+top\new projects\ats-re
+sume-scorer\server\test
+-gemini.js:8:20) {
+  status: 404,
+  statusText: 'Not 
+Found',
+  errorDetails: 
+undefined
+}

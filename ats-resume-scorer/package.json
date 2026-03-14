@@ -1,10 +1,19 @@
 {
+  "name": "ats-resume-scorer-root",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm start",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
   "dependencies": {
     "autoprefixer": "^10.4.27",
     "axios": "^1.13.6",
     "framer-motion": "^12.35.2",
     "lucide-react": "^0.577.0",
     "postcss": "^8.5.8",
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^4.2.1",
+    "concurrently": "^8.2.2"
   }
 }

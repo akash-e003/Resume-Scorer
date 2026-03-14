@@ -16,8 +16,8 @@ app.use(express.json());
 const upload = multer({ storage: multer.memoryStorage() });
 
 // Gemini API setup
-const genAI = new GoogleGenerativeAI(process.env.ANTHROPIC_API_KEY); // Reusing the env var for convenience or you can rename it
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 app.post('/api/analyze', upload.single('resume'), async (req, res) => {
   try {
@@ -53,12 +53,17 @@ ${jobDescription}`;
       const resultJson = JSON.parse(cleanJson);
       res.json(resultJson);
     } catch (parseError) {
-      console.error('JSON Parse Error:', responseText);
-      res.status(500).json({ error: 'Failed to parse AI response' });
+      console.error('JSON Parse Error:', parseError);
+      console.error('Raw AI Response:', responseText);
+      res.status(500).json({ error: 'Failed to parse AI response. The AI might not have returned valid JSON.' });
     }
 
   } catch (error) {
-    console.error('Analysis Error:', error);
+    console.error('Detailed Analysis Error:', error);
+    // Log specific details if available
+    if (error.response) {
+      console.error('API Response Data:', error.response.data);
+    }
     res.status(500).json({ error: 'Internal server error during analysis. Check your API key and quota.' });
   }
 });

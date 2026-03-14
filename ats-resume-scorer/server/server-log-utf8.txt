@@ -1,0 +1,55 @@
+﻿[dotenv@17.3.1] injecting env (2) from .env -- tip: ΓÜÖ∩╕Å  specify custom .env file path with { path: '/custom/path/.env' }
+Server running on port 5000
+node : Detailed Analysis 
+Error: TypeError: pdf is not 
+a function
+At line:1 char:1
++ node index.js > 
+server-log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Det    
+ailed Analys... not a     
+function:String) [], R    
+emoteException
+    + FullyQualifiedErrorI   
+ d : NativeCommandError
+ 
+    at C:\Users\akash\OneDriv
+e\Desktop\new projects\ats-re
+sume-scorer\server\index.js:3
+2:24
+    at Layer.handleRequest (C
+:\Users\akash\OneDrive\Deskto
+p\new projects\ats-resume-sco
+rer\server\node_modules\route
+r\lib\layer.js:152:17)
+    at next (C:\Users\akash\O
+neDrive\Desktop\new projects\
+ats-resume-scorer\server\node
+_modules\router\lib\route.js:
+157:13)
+    at done (C:\Users\akash\O
+neDrive\Desktop\new projects\
+ats-resume-scorer\server\node
+_modules\multer\lib\make-midd
+leware.js:69:7)
+    at indicateDone (C:\Users
+\akash\OneDrive\Desktop\new p
+rojects\ats-resume-scorer\ser
+ver\node_modules\multer\lib\m
+ake-middleware.js:73:68)
+    at Multipart.<anonymous> 
+(C:\Users\akash\OneDrive\Desk
+top\new projects\ats-resume-s
+corer\server\node_modules\mul
+ter\lib\make-middleware.js:24
+3:7)
+    at Multipart.emit 
+(node:events:519:28)
+    at emitCloseNT (node:inte
+rnal/streams/destroy:148:10)
+    at process.processTicksAn
+dRejections (node:internal/pr
+ocess/task_queues:89:21)
